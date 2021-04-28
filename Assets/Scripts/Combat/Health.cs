@@ -31,8 +31,6 @@ namespace RPG.Combat
 
         private void Die()
         {
-            GetComponent<NavMeshAgent>().enabled = false;
-            GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<Animator>().SetTrigger("die");
             isDead = true;
         }

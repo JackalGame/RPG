@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 4754488475983926327}
   - component: {fileID: 2061839875}
   - component: {fileID: 4215490262794616800}
-  - component: {fileID: 198635305098669476}
   - component: {fileID: 8677407376950554842}
   m_Layer: 0
   m_Name: Character
@@ -189,20 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 20
---- !u!136 &198635305098669476
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141046166487624537}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.23
-  m_Height: 1.8615067
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9390751, z: 0}
 --- !u!114 &8677407376950554842
 MonoBehaviour:
   m_ObjectHideFlags: 0
