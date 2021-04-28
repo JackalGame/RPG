@@ -2864,6 +2864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275441058463398872, guid: 686181cdfd10b7c48b23a6e22986e0e9, type: 3}
+      propertyPath: healthPoints
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3929163422732250977, guid: 686181cdfd10b7c48b23a6e22986e0e9, type: 3}
       propertyPath: m_Name
       value: Enemy
