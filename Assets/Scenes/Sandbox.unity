@@ -2309,14 +2309,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2113986330491835026, guid: 77f50f340e506f94ca40682fb8f7e014, type: 3}
-      propertyPath: weaponRange
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113986330491835026, guid: 77f50f340e506f94ca40682fb8f7e014, type: 3}
-      propertyPath: weaponDamage
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7772866674218853823, guid: 77f50f340e506f94ca40682fb8f7e014, type: 3}
       propertyPath: m_RootOrder
       value: 2
