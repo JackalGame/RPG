@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 4754488475983926327}
   - component: {fileID: 2061839875}
   - component: {fileID: 4215490262794616800}
+  - component: {fileID: 198635305098669476}
+  - component: {fileID: 8677407376950554842}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -102,7 +104,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141046166487624537}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+  m_Avatar: {fileID: 9000000, guid: cb5c9cedca12e1a4aa282ae7b53f42ab, type: 3}
   m_Controller: {fileID: 9100000, guid: e5562532df2b94046a1a541339112588, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -171,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 2
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 1.4
   weaponDamage: 5
   timeSinceLastAttack: 0
 --- !u!114 &4215490262794616800
@@ -186,4 +188,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f92f3695dafef4e9bea2798e9de86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthPoints: 20
+--- !u!136 &198635305098669476
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141046166487624537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.23
+  m_Height: 1.8615067
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9390751, z: 0}
+--- !u!114 &8677407376950554842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141046166487624537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6185eed8a6b76e41952c033791b4c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
