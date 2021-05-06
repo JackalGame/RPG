@@ -82,6 +82,7 @@ namespace RPG.Combat
         {
             StopAttackAnim();
             target = null;
+            mover.Cancel();
         }
 
         private void TriggerAttackAnim()
