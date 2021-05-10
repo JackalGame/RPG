@@ -13,7 +13,7 @@ namespace RPG.Movement
         private Animator anim;
         private ActionScheduler actionScheduler;
 
-        private void Start()
+        private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             anim = GetComponent<Animator>();
