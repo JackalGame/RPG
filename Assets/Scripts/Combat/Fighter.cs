@@ -9,6 +9,9 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1.5f;
         [SerializeField] int weaponDamage = 5;
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransform = null;
+        [SerializeField] AnimatorOverrideController weaponOverride = null;
 
         private Health target;
         [SerializeField] private float timeSinceLastAttack = Mathf.Infinity;
@@ -22,6 +25,7 @@ namespace RPG.Combat
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
             anim = GetComponent<Animator>();
+            EquipWeapon();
         }
 
         private void Update()
@@ -95,6 +99,12 @@ namespace RPG.Combat
         {
             anim.ResetTrigger("attack");
             anim.SetTrigger("cancelAttack");
+        }
+
+        private void EquipWeapon()
+        {
+            Instantiate(weaponPrefab, handTransform);
+            anim.runtimeAnimatorController = weaponOverride;
         }
     }
 }
