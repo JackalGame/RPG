@@ -6,18 +6,20 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [SerializeField] float weaponRange = 2f;
+
         [SerializeField] float timeBetweenAttacks = 1.5f;
-        [SerializeField] int weaponDamage = 5;
         [SerializeField] Transform handTransform = null;
         [SerializeField] Weapon weapon = null;
 
-        private Health target;
-        [SerializeField] private float timeSinceLastAttack = Mathf.Infinity;
+        private float timeSinceLastAttack = Mathf.Infinity;
 
+        private Health target;
         private Mover mover;
         private ActionScheduler actionScheduler;
         private Animator anim;
+
+        private float weaponRange;
+        private int weaponDamage;
 
         private void Start()
         {
@@ -104,6 +106,8 @@ namespace RPG.Combat
         {
             if(weapon == null) { return; }
             weapon.Spawn(handTransform, anim);
+            weaponRange = weapon.GetRange();
+            weaponDamage = weapon.GetDamage();
         }
     }
 }
