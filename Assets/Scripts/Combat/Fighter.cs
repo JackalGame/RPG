@@ -9,7 +9,7 @@ namespace RPG.Combat
 
         [SerializeField] float timeBetweenAttacks = 1.5f;
         [SerializeField] Transform handTransform = null;
-        [SerializeField] Weapon weapon = null;
+        [SerializeField] Weapon defaultWeapon = null;
 
         private float timeSinceLastAttack = Mathf.Infinity;
 
@@ -17,6 +17,7 @@ namespace RPG.Combat
         private Mover mover;
         private ActionScheduler actionScheduler;
         private Animator anim;
+        private Weapon currentWeapon = null;
 
         private float weaponRange;
         private int weaponDamage;
@@ -26,7 +27,7 @@ namespace RPG.Combat
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
             anim = GetComponent<Animator>();
-            SpawnWeapon();
+            EquipWeapon(defaultWeapon);
         }
 
         private void Update()
@@ -102,9 +103,9 @@ namespace RPG.Combat
             anim.SetTrigger("cancelAttack");
         }
 
-        private void SpawnWeapon()
+        public void EquipWeapon(Weapon weapon)
         {
-            if(weapon == null) { return; }
+            currentWeapon = weapon;
             weapon.Spawn(handTransform, anim);
             weaponRange = weapon.GetRange();
             weaponDamage = weapon.GetDamage();
