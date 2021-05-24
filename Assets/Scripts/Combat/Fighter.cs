@@ -60,11 +60,25 @@ namespace RPG.Combat
             timeSinceLastAttack = 0;
         }
 
-        // Animation Evant
+        // Animation Event
         void Hit()
         {
             if(target == null) { return; }
-            target.TakeDamage(weaponDamage);
+
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+            }
+            else
+            {
+                target.TakeDamage(weaponDamage);
+            }
+        }
+
+        //Animation Event
+        void Shoot()
+        {
+            Hit();
         }
 
         private bool GetIsInRange()
