@@ -93,6 +93,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9024428801814966054, guid: c88fe0c0b6bd6a447baa65038e131cad, type: 3}
+      propertyPath: characterClass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4953139749454353581, guid: c88fe0c0b6bd6a447baa65038e131cad, type: 3}
       propertyPath: m_Radius
       value: 0.4
