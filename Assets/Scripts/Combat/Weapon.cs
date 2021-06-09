@@ -1,5 +1,5 @@
-using RPG.Core;
 using UnityEngine;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -9,7 +9,7 @@ namespace RPG.Combat
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
         [SerializeField] float weaponRange = 2f;
-        [SerializeField] int weaponDamage = 5;
+        [SerializeField] float weaponDamage = 5;
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
 
@@ -20,7 +20,7 @@ namespace RPG.Combat
             return weaponRange;
         }
 
-        public int GetDamage()
+        public float GetDamage()
         {
             return weaponDamage;
         }

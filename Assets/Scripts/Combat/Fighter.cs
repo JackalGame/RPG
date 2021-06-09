@@ -1,6 +1,7 @@
 using RPG.Core;
 using RPG.Movement;
 using RPG.Saving;
+using RPG.Resources;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -22,7 +23,7 @@ namespace RPG.Combat
         private Weapon currentWeapon = null;
 
         private float weaponRange;
-        private int weaponDamage;
+        private float weaponDamage;
 
         private void Awake()
         {
@@ -139,7 +140,7 @@ namespace RPG.Combat
         public void RestoreState(object state)
         {
             string weaponName = (string)state;
-            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
     }

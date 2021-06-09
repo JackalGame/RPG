@@ -1,7 +1,5 @@
-using RPG.Core;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -15,7 +13,7 @@ namespace RPG.Combat
         [SerializeField] float lifeAfterImpact = 2f;
 
         Health target;
-        int damage = 0;
+        float damage = 0;
 
         private void Start()
         {
@@ -34,7 +32,7 @@ namespace RPG.Combat
             transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
         }
 
-        public void SetTarget(Health target, int damage)
+        public void SetTarget(Health target, float damage)
         {
             this.target = target;
             this.damage = damage;
