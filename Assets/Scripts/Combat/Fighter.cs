@@ -73,11 +73,11 @@ namespace RPG.Combat
 
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject);
             }
             else
             {
-                target.TakeDamage(weaponDamage);
+                target.TakeDamage(gameObject, weaponDamage);
             }
         }
 
@@ -130,6 +130,11 @@ namespace RPG.Combat
             weapon.Spawn(rightHandTransform, leftHandTransform, anim);
             weaponRange = weapon.GetRange();
             weaponDamage = weapon.GetDamage();
+        }
+
+        public Health GetTarget()
+        {
+            return target;
         }
 
         public object CaptureState()

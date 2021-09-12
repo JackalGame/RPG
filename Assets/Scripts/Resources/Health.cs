@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
+using System;
 
 namespace RPG.Resources
 {
@@ -23,7 +24,7 @@ namespace RPG.Resources
             return isDead;
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(GameObject instigator, float damage)
         {
             if (isDead) { return; }
 
@@ -31,8 +32,17 @@ namespace RPG.Resources
 
             if(healthPoints <= 0)
             {
+                AwardExperience(instigator);
                 Die();
             }
+        }
+
+        private void AwardExperience(GameObject instigator)
+        {
+            Experience experience = instigator.GetComponent<Experience>();
+            if (experience == null) return;
+
+            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
         }
 
         public float GetPercentage()
