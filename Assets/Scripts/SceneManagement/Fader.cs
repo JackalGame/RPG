@@ -10,7 +10,7 @@ namespace RPG.SceneManagement
 
         private void Start()
         {
-            canvasGroup = GetComponent<CanvasGroup>();
+                canvasGroup = GetComponent<CanvasGroup>();
         }
 
 
@@ -35,6 +35,10 @@ namespace RPG.SceneManagement
 
         public void FadeOutImmediate()
         {
+            if(canvasGroup == null)
+            {
+                canvasGroup = GetComponent<CanvasGroup>();
+            }
             canvasGroup.alpha = 1;
         }
     }
