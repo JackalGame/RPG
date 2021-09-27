@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +17,9 @@ namespace RPG.Resources
 
         private void Update()
         {
-            healthValue.text = String.Format("{0:0}%", health.GetPercentage());
+            healthValue.text = string.Format("{0:0} / {1:0}", health.GetCurrentHealth(), health.GetMaxHealth());
+            //healthValue.text = String.Format("{0:0}%", health.GetPercentage());
         }
     }
 }
+ 
