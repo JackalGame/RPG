@@ -32,8 +32,11 @@ namespace RPG.Combat
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
             anim = GetComponent<Animator>();
+        }
 
-            if(currentWeapon == null)
+        private void Start()
+        {
+            if (currentWeapon == null)
             {
                 EquipWeapon(defaultWeapon);
             }

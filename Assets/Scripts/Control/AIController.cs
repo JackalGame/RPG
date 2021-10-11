@@ -30,14 +30,17 @@ namespace RPG.Control
         private float timeSinceLastSawPlayer = Mathf.Infinity;
 
 
-        private void Start()
+        private void Awake()
         {
             player = GameObject.FindWithTag("Player");
             health = GetComponent<Health>();
             fighter = GetComponent<Fighter>();
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
+        }
 
+        private void Start()
+        {
             guardPosition = transform.position;
         }
 

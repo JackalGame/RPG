@@ -128,7 +128,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f92f3695dafef4e9bea2798e9de86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 20
+  regenerartionPercentage: 80
 --- !u!114 &8677407376950554842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,3 +248,5 @@ MonoBehaviour:
   startingLevel: 1
   characterClass: 1
   progression: {fileID: 11400000, guid: 7e67daabd6347cb428c5174b7334da27, type: 2}
+  levelUpParticleEffect: {fileID: 0}
+  shouldUseModifiers: 0

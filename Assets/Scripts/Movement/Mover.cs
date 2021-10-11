@@ -60,6 +60,7 @@ namespace RPG.Movement
         {
             SerializableVector3 position = (SerializableVector3)state;
             navMeshAgent.Warp(position.ToVector());
+            actionScheduler.CancelCurrentAction();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace RPG.SceneManagement
 
         private Fader fader;
 
-        private void Start()
+        private void Awake()
         {
             fader = FindObjectOfType<Fader>();
         }
