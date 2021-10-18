@@ -53,7 +53,6 @@ namespace RPG.SceneManagement
 
         public void Delete()
         {
-            Debug.Log(defaultSaveFile);
             GetComponent<SavingSystem>().Delete(defaultSaveFile);
         }
     }

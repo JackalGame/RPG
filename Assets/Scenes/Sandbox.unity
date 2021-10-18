@@ -5734,7 +5734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 159146514771985991, guid: 911b684b78ba50e458b27bcd7f683b51, type: 3}
       propertyPath: startingLevel
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 159146514771985991, guid: 911b684b78ba50e458b27bcd7f683b51, type: 3}
       propertyPath: shouldUseModifiers
