@@ -4,7 +4,7 @@ using RPG.Movement;
 using System;
 using UnityEngine;
 using UnityEngine.AI;
-using RPG.Resources;
+using RPG.Attributes;
 using GameDevTV.Utils;
 
 namespace RPG.Control
