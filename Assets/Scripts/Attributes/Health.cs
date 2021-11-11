@@ -66,14 +66,7 @@ namespace RPG.Attributes
         {
             if (isDead) { return; }
 
-            Debug.Log($"{gameObject.name} took damage: {damage}");
-
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
-            
-            //if(healthBar != null)
-            //{
-            //    healthBar.updateHealth(GetFraction());
-            //}
 
             if(healthPoints.value <= 0)
             {
@@ -105,6 +98,11 @@ namespace RPG.Attributes
         public float GetFraction()
         {
             return healthPoints.value / GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
+
+        public void Heal(float healthToRestore)
+        {
+            healthPoints.value = Mathf.Min(healthPoints.value + healthToRestore, GetMaxHealth());
         }
 
         private void AwardExperience(GameObject instigator)
