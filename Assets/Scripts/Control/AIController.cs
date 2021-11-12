@@ -13,6 +13,7 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 4f;
+        [SerializeField] float agroCooldownTime = 6f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] float waypointTolerance = 1f;
@@ -29,6 +30,7 @@ namespace RPG.Control
         private int currentWaypointIndex = 0;
         private float timeWaitedAtWaypoint = Mathf.Infinity;
         private float timeSinceLastSawPlayer = Mathf.Infinity;
+        private float timeSinceAggrevated = Mathf.Infinity;
 
 
         private void Awake()
@@ -56,7 +58,7 @@ namespace RPG.Control
         {
             if (health.IsDead()) { return; }
 
-            if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
+            if (IsAggrevated() && fighter.CanAttack(player))
             {
                 AttackBehaviour();
             }
@@ -72,10 +74,16 @@ namespace RPG.Control
             UpdateTimers();
         }
 
+        public void Aggrevate()
+        {
+            timeSinceAggrevated = 0;
+        }
+
         private void UpdateTimers()
         {
             timeWaitedAtWaypoint += Time.deltaTime;
             timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
         }
 
 
@@ -129,10 +137,10 @@ namespace RPG.Control
 
 
 
-        private bool InAttackRangeOfPlayer()
+        private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-            return distanceToPlayer <= chaseDistance;
+            return distanceToPlayer <= chaseDistance || timeSinceAggrevated < agroCooldownTime;
         }
 
         // Called by Unity
