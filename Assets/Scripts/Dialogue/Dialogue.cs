@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+namespace RPG.Dialogue
+{
+    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
+    public class Dialogue : ScriptableObject
     {
-        
+        [SerializeField] DialogueNode[] nodes;
     }
 }
