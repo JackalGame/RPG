@@ -7,8 +7,8 @@ namespace RPG.Dialogue
     [System.Serializable]
     public class DialogueNode
     {
-        [SerializeField] string uniqueID;
-        [SerializeField] string sentence;
-        [SerializeField] string[] children;
+        public string uniqueID;
+        public string sentence;
+        public string[] children;
     }
 }
