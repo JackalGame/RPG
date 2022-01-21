@@ -1,4 +1,5 @@
 using GameDevTV.Inventories;
+using RPG.Stats;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,18 @@ namespace RPG.Inventories
     {
         [Tooltip("How far can the pickups be scattered from the dropper.")]
         [SerializeField] float scatterDistance = 1;
+        [SerializeField] DropLibrary dropLibrary;
 
         const int ATTEMPTS = 30;
 
         public void RandomDrop()
         {
-
+            var baseStats = GetComponent<BaseStats>();
+            var drops = dropLibrary.GetRandomDrops(baseStats.GetLevel());
+            foreach (var drop in drops)
+            {
+                DropItem(drop.item, drop.number);
+            }
         }
 
         protected override Vector3 GetDropLocation()

@@ -91,7 +91,7 @@ namespace RPG.Combat
         {
             if(target == null) { return; }
 
-            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
+            int damage = (int)GetComponent<BaseStats>().GetStat(Stat.Damage);
 
             if(currentWeapon.value != null)
             {
