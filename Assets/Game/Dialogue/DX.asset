@@ -19,8 +19,8 @@ MonoBehaviour:
     - b
     - c
   - uniqueID: b
-    sentence: What's up man
+    sentence: What's up bro
     children: []
   - uniqueID: c
-    sentence: Do one!
+    sentence: Leave me alone, before i punch you in the face
     children: []

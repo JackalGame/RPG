@@ -54,9 +54,20 @@ namespace RPG.Dialogue.Editor
             {
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUILayout.LabelField(node.sentence);
+                    EditorGUI.BeginChangeCheck();
+
+                    EditorGUILayout.LabelField("Node: ");
+                    string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
+                    string newText = EditorGUILayout.TextField(node.sentence);
+
+                    if (EditorGUI.EndChangeCheck())
+                    {
+                        Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
+                        node.sentence = newText;
+                        node.uniqueID = newUniqueID;
+                    }
                 }
-            }
+            } 
         }
     }
 }
