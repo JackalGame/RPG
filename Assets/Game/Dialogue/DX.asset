@@ -18,9 +18,27 @@ MonoBehaviour:
     children:
     - b
     - c
+    rect:
+      serializedVersion: 2
+      x: 356
+      y: 179
+      width: 200
+      height: 200
   - uniqueID: b
     sentence: What's up bro
     children: []
+    rect:
+      serializedVersion: 2
+      x: 627
+      y: 160
+      width: 200
+      height: 100
   - uniqueID: c
-    sentence: Leave me alone, before i punch you in the face
+    sentence: Go away!!!!
     children: []
+    rect:
+      serializedVersion: 2
+      x: 629
+      y: 293
+      width: 200
+      height: 100
