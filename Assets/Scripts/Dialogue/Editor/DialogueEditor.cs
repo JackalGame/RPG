@@ -21,7 +21,13 @@ namespace RPG.Dialogue.Editor
         Vector2 draggingOffset;
 
         [NonSerialized]
-        DialogueNode creatingNode = null;
+        DialogueNode creatingNode = null;        
+        
+        [NonSerialized]
+        DialogueNode deletingNode = null;
+
+        [NonSerialized]
+        DialogueNode linkingParentNode = null;
         
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -88,6 +94,13 @@ namespace RPG.Dialogue.Editor
                     selectedDialogue.CreateNode(creatingNode);
                     creatingNode = null;
                 }
+
+                if(deletingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
+                }
             } 
         }
 
@@ -126,12 +139,71 @@ namespace RPG.Dialogue.Editor
                 node.sentence = newText;
             }
 
-            if (GUILayout.Button("+")) 
+            GUILayout.BeginHorizontal();
+
+            DrawButtons(node);
+
+            GUILayout.EndHorizontal();
+            GUILayout.EndArea();
+        }
+
+        private void DrawButtons(DialogueNode node)
+        {
+            //Styles
+                        var styleRed = new GUIStyle(GUI.skin.button);
+            styleRed.hover.textColor = Color.red;
+
+            var styleGreen = new GUIStyle(GUI.skin.button);
+            styleGreen.hover.textColor = Color.green;
+
+            var styleBlue = new GUIStyle(GUI.skin.button);
+            styleBlue.hover.textColor = Color.cyan;
+
+            //Cancel Button
+            if (GUILayout.Button("x", styleRed))
+            {
+                deletingNode = node;
+            }
+
+            //Link Buttons
+            if (linkingParentNode == null)
+            {
+                if (GUILayout.Button("link", styleBlue))
+                {
+                    linkingParentNode = node;
+                }
+            }
+            else if (linkingParentNode == node)
+            {
+                if (GUILayout.Button("cancel", styleBlue))
+                {
+                    linkingParentNode = null;
+                }
+            }
+            else if (linkingParentNode.children.Contains(node.uniqueID))
+            {
+                if (GUILayout.Button("unlink", styleBlue))
+                {
+                    Undo.RecordObject(selectedDialogue, "Removed Dialogue Link");
+                    linkingParentNode.children.Remove(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+            else
+            {
+                if (GUILayout.Button("child", styleBlue))
+                {
+                    Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
+                    linkingParentNode.children.Add(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+
+            //Add Button
+            if (GUILayout.Button("+", styleGreen))
             {
                 creatingNode = node;
             }
-
-            GUILayout.EndArea();
         }
 
         private void DrawConnections(DialogueNode node)

@@ -13,6 +13,85 @@ MonoBehaviour:
   m_Name: Rick Flair
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: 
-    sentence: Woooo
+  - uniqueID: eef7923e-57c3-495c-adfd-f8d261d1fd78
+    sentence: Woooooo
+    children:
+    - 935aaf2e-7757-4e73-99a2-739587e9f3b6
+    - 2fd13b33-8464-4581-81f8-2a860a3b5b05
+    - 3ef5f059-ea19-4eb6-ad56-2bdf94a9dc2a
+    - a91d5e78-feac-49d7-b13c-2de44cae2611
+    - cc9bc927-72a5-4cf5-94e9-b25afe84afdb
+    - 29f87564-4099-4127-9aa6-737d21a6420d
+    rect:
+      serializedVersion: 2
+      x: 386
+      y: 213
+      width: 200
+      height: 100
+  - uniqueID: 3ef5f059-ea19-4eb6-ad56-2bdf94a9dc2a
+    sentence: 
     children: []
+    rect:
+      serializedVersion: 2
+      x: 547
+      y: 551
+      width: 200
+      height: 100
+  - uniqueID: a91d5e78-feac-49d7-b13c-2de44cae2611
+    sentence: 
+    children:
+    - 878bcc0e-59d6-4c9d-8097-127d90de94bd
+    - 10051e30-3ad9-409a-9f4c-d99ade5e2dcd
+    rect:
+      serializedVersion: 2
+      x: 678
+      y: 416
+      width: 200
+      height: 100
+  - uniqueID: cc9bc927-72a5-4cf5-94e9-b25afe84afdb
+    sentence: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 662
+      y: 124
+      width: 200
+      height: 100
+  - uniqueID: 29f87564-4099-4127-9aa6-737d21a6420d
+    sentence: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 653
+      y: 3
+      width: 200
+      height: 100
+  - uniqueID: 878bcc0e-59d6-4c9d-8097-127d90de94bd
+    sentence: 
+    children:
+    - de1c3a77-8fb6-4abf-8578-e020f42d5dc6
+    rect:
+      serializedVersion: 2
+      x: 944
+      y: 250
+      width: 200
+      height: 100
+  - uniqueID: 10051e30-3ad9-409a-9f4c-d99ade5e2dcd
+    sentence: 
+    children:
+    - de1c3a77-8fb6-4abf-8578-e020f42d5dc6
+    rect:
+      serializedVersion: 2
+      x: 922
+      y: 489
+      width: 200
+      height: 100
+  - uniqueID: de1c3a77-8fb6-4abf-8578-e020f42d5dc6
+    sentence: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 1233
+      y: 411
+      width: 200
+      height: 100
