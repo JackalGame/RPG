@@ -9,7 +9,11 @@ namespace RPG.Dialogue.Editor
 {
     public class DialogueEditor : EditorWindow
     {
+        Vector2 scrollPosition;
+        Vector2 canvasSize;
         Dialogue selectedDialogue = null;
+
+        const float BACKGROUND_SIZE = 50f;
         
         [NonSerialized]
         GUIStyle nodeStyle = null;
@@ -28,6 +32,13 @@ namespace RPG.Dialogue.Editor
 
         [NonSerialized]
         DialogueNode linkingParentNode = null;
+
+        [NonSerialized]
+        bool draggingCanvas = false;
+
+        [NonSerialized]
+        Vector2 draggingCanvasOffset;
+
         
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -64,6 +75,7 @@ namespace RPG.Dialogue.Editor
             if(newDialogue != null)
             {
                 selectedDialogue = newDialogue;
+                canvasSize = selectedDialogue.getCanvasSize();
                 Repaint();
             }
         }
@@ -78,6 +90,13 @@ namespace RPG.Dialogue.Editor
             {
                 ProcessEvents();
 
+                scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+                Rect canvasRect = GUILayoutUtility.GetRect(canvasSize.x, canvasSize.y);
+                Texture2D backgroundTex = Resources.Load("background") as Texture2D;
+                Rect texCoords = new Rect(0, 0, canvasSize.x / BACKGROUND_SIZE, canvasSize.y / BACKGROUND_SIZE);
+                GUI.DrawTextureWithTexCoords(canvasRect, backgroundTex, texCoords);
+
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
                     DrawConnections(node);
@@ -87,6 +106,8 @@ namespace RPG.Dialogue.Editor
                 {
                     DrawNode(node);
                 }
+                
+                EditorGUILayout.EndScrollView();
 
                 if (creatingNode != null)
                 {
@@ -106,24 +127,48 @@ namespace RPG.Dialogue.Editor
 
         private void ProcessEvents()
         {
-            if(Event.current.type == EventType.MouseDown && draggingNode == null)
+            Event e = Event.current;
+
+            //Drag Node using left mouse button
+
+            if(e.type == EventType.MouseDown && draggingNode == null && e.button == 0)
             {
-                draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                draggingNode = GetNodeAtPoint(e.mousePosition + scrollPosition);
                 if(draggingNode != null)
                 {
-                    draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                    draggingOffset = draggingNode.rect.position - e.mousePosition;
                 }
             }
-            else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
+            else if (e.type == EventType.MouseDrag && draggingNode != null && e.button == 0)
             {
                 Undo.RecordObject(selectedDialogue, "Move Dialogue Node");
-                draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
+                draggingNode.rect.position = e.mousePosition + draggingOffset;
                 GUI.changed = true;
             }
-            else if(Event.current.type == EventType.MouseUp && draggingNode != null)
+            else if(e.type == EventType.MouseUp && draggingNode != null && e.button == 0)
             {
                 draggingNode = null;
             }
+
+
+            //Drag Canvas using middle mouse button
+
+            if (e.type == EventType.MouseDown && e.button == 2)
+            {
+                draggingCanvas = true;
+                draggingCanvasOffset = e.mousePosition + scrollPosition;
+            }
+            else if (e.type == EventType.MouseDrag && draggingCanvas && e.button == 2)
+            {
+                Undo.RecordObject(selectedDialogue, "Move Dialogue Node");
+                scrollPosition = draggingCanvasOffset - e.mousePosition;
+                GUI.changed = true;
+            }
+            else if (e.type == EventType.MouseUp && draggingCanvas && e.button == 2)
+            {
+                draggingCanvas = false;
+            }
+
         }
 
         private void DrawNode(DialogueNode node)
@@ -157,7 +202,7 @@ namespace RPG.Dialogue.Editor
             styleGreen.hover.textColor = Color.green;
 
             var styleBlue = new GUIStyle(GUI.skin.button);
-            styleBlue.hover.textColor = Color.cyan;
+            styleBlue.hover.textColor = Color.blue;
 
             //Cancel Button
             if (GUILayout.Button("x", styleRed))

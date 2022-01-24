@@ -9,6 +9,8 @@ namespace RPG.Dialogue
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
     public class Dialogue : ScriptableObject
     {
+        [SerializeField]
+        Vector2 canvasSize = new Vector2(2000, 2000);
         [SerializeField] 
         List<DialogueNode> nodes = new List<DialogueNode>();
 
@@ -34,6 +36,11 @@ namespace RPG.Dialogue
             {
                 nodeLookup[node.uniqueID] = node;
             }
+        }
+
+        public Vector2 getCanvasSize()
+        {
+            return canvasSize;
         }
 
         public IEnumerable<DialogueNode> GetAllNodes()

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800506d01fdb34248871977012a4b6ea, type: 3}
   m_Name: Rick Flair
   m_EditorClassIdentifier: 
+  canvasSize: {x: 4000, y: 2000}
   nodes:
   - uniqueID: eef7923e-57c3-495c-adfd-f8d261d1fd78
     sentence: Woooooo
@@ -24,8 +25,8 @@ MonoBehaviour:
     - 29f87564-4099-4127-9aa6-737d21a6420d
     rect:
       serializedVersion: 2
-      x: 386
-      y: 213
+      x: 143
+      y: 251
       width: 200
       height: 100
   - uniqueID: 3ef5f059-ea19-4eb6-ad56-2bdf94a9dc2a
@@ -33,8 +34,8 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 547
-      y: 551
+      x: 553
+      y: 548
       width: 200
       height: 100
   - uniqueID: a91d5e78-feac-49d7-b13c-2de44cae2611
@@ -44,8 +45,8 @@ MonoBehaviour:
     - 10051e30-3ad9-409a-9f4c-d99ade5e2dcd
     rect:
       serializedVersion: 2
-      x: 678
-      y: 416
+      x: 606
+      y: 406
       width: 200
       height: 100
   - uniqueID: cc9bc927-72a5-4cf5-94e9-b25afe84afdb
@@ -53,8 +54,8 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 662
-      y: 124
+      x: 639
+      y: 215
       width: 200
       height: 100
   - uniqueID: 29f87564-4099-4127-9aa6-737d21a6420d
@@ -62,8 +63,8 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 653
-      y: 3
+      x: 640
+      y: 75
       width: 200
       height: 100
   - uniqueID: 878bcc0e-59d6-4c9d-8097-127d90de94bd
