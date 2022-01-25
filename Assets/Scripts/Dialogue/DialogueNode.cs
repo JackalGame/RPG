@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -7,9 +8,16 @@ namespace RPG.Dialogue
 {
     public class DialogueNode : ScriptableObject
     {
+        [SerializeField] bool isPlayerSpeaking = false;
         [SerializeField] private string sentence;
         [SerializeField] private List<string> children = new List<string>();
         [SerializeField] private Rect rect = new Rect(0, 0, 200, 100);
+
+
+        public bool IsPlayerSpeaking()
+        {
+            return isPlayerSpeaking;
+        }
 
         public string GetSentence()
         {
@@ -55,6 +63,13 @@ namespace RPG.Dialogue
         {
             Undo.RecordObject(this, "Removed Dialogue Link");
             children.Remove(childID);
+            EditorUtility.SetDirty(this);
+        }
+
+        public void SetPlayerSpeaking(bool newIsPlayerSpeaker)
+        {
+            Undo.RecordObject(this, "Changed Speaker");
+            isPlayerSpeaking = newIsPlayerSpeaker;
             EditorUtility.SetDirty(this);
         }
 #endif

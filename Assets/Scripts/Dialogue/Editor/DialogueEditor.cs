@@ -16,7 +16,11 @@ namespace RPG.Dialogue.Editor
         const float BACKGROUND_SIZE = 50f;
         
         [NonSerialized]
-        GUIStyle nodeStyle = null;
+        GUIStyle nodeStylePlayer = null;
+        [NonSerialized]
+        GUIStyle nodeStyleAI = null;
+
+
 
         [NonSerialized]
         DialogueNode draggingNode = null;
@@ -63,10 +67,20 @@ namespace RPG.Dialogue.Editor
         {
             Selection.selectionChanged += OnSelectionChanged;
 
-            nodeStyle = new GUIStyle();
-            nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
-            nodeStyle.padding = new RectOffset(20, 20, 20, 20);
-            nodeStyle.border = new RectOffset(12, 12, 12, 12);
+            SetUpNodeStyles();
+        }
+
+        private void SetUpNodeStyles()
+        {
+            nodeStylePlayer = new GUIStyle();
+            nodeStylePlayer.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
+            nodeStylePlayer.padding = new RectOffset(20, 20, 20, 20);
+            nodeStylePlayer.border = new RectOffset(12, 12, 12, 12);
+
+            nodeStyleAI = new GUIStyle();
+            nodeStyleAI.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
+            nodeStyleAI.padding = new RectOffset(20, 20, 20, 20);
+            nodeStyleAI.border = new RectOffset(12, 12, 12, 12);
         }
 
         private void OnSelectionChanged()
@@ -176,7 +190,14 @@ namespace RPG.Dialogue.Editor
 
         private void DrawNode(DialogueNode node)
         {
-            GUILayout.BeginArea(node.GetRect(), nodeStyle);
+            GUIStyle style = nodeStyleAI;
+
+            if (node.IsPlayerSpeaking())
+            {
+                style = nodeStylePlayer;
+            } 
+
+            GUILayout.BeginArea(node.GetRect(), style);
 
             node.SetSentence(EditorGUILayout.TextField(node.GetSentence()));
 

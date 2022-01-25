@@ -12,6 +12,8 @@ namespace RPG.Dialogue
     {
         [SerializeField]
         Vector2 canvasSize = new Vector2(2000, 2000);
+        [SerializeField]
+        Vector2 newNodeOffset = new Vector2(300, 0);
         [SerializeField] 
         List<DialogueNode> nodes = new List<DialogueNode>();
 
@@ -73,13 +75,15 @@ namespace RPG.Dialogue
             Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
-        private static DialogueNode MakeNode(DialogueNode parent)
+        private DialogueNode MakeNode(DialogueNode parent)
         {
             DialogueNode newNode = CreateInstance<DialogueNode>();
             newNode.name = Guid.NewGuid().ToString();
             if (parent != null)
             {
                 parent.AddChild(newNode.name);
+                newNode.SetPlayerSpeaking(!parent.IsPlayerSpeaking());
+                newNode.SetPosition(parent.GetRect().position + newNodeOffset);
             }
 
             return newNode;
