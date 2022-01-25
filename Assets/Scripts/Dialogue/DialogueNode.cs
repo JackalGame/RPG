@@ -33,6 +33,7 @@ namespace RPG.Dialogue
             {
                 Undo.RecordObject(this, "Sentence Changed");
                 sentence = newSentence;
+                EditorUtility.SetDirty(this);
             }
         }        
         
@@ -40,18 +41,21 @@ namespace RPG.Dialogue
         {
             Undo.RecordObject(this, "Move Dialogue Node");
             rect.position = newPos;
+            EditorUtility.SetDirty(this);
         }
 
         public void AddChild(string childID)
         {
             Undo.RecordObject(this, "Add Dialogue Link");
             children.Add(childID);
+            EditorUtility.SetDirty(this);
         }        
         
         public void RemoveChild(string childID)
         {
             Undo.RecordObject(this, "Removed Dialogue Link");
             children.Remove(childID);
+            EditorUtility.SetDirty(this);
         }
 #endif
     }

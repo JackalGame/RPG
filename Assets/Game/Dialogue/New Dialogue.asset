@@ -16,8 +16,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 667
-    y: 59
+    x: 668
+    y: 56
     width: 200
     height: 100
 --- !u!114 &-2496086723801507038
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
   m_Name: a57d7a85-1f8d-4060-ac74-4af0c3ba7cfd
   m_EditorClassIdentifier: 
-  sentence: 
+  sentence: sadasda
   children: []
   rect:
     serializedVersion: 2
