@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 14dfeaea-da58-432b-9e26-9f4a1092eb12
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  sentence: 
+  sentence: Wooooooo!
   children:
   - 54801be9-25a2-4d06-aa90-2664c8135b71
   - e1396ad7-ee07-44ac-aca1-ec8fa71e618d
@@ -37,14 +37,14 @@ MonoBehaviour:
   m_Name: d0bce397-21c4-4ec4-b754-01c0da91dc5c
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  sentence: 
+  sentence: Hey! That's my line.
   children:
   - cbb65245-c2d6-44e1-8dbd-3d2d811c4eac
   - 54393916-c553-4ba7-93a8-87306791cb0f
   rect:
     serializedVersion: 2
-    x: 758
-    y: 171
+    x: 778
+    y: 217
     width: 200
     height: 100
 --- !u!114 &-7123275158347785840
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: ccdc982a-d31e-4362-806e-9b3cc9552746
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  sentence: 
+  sentence: You! Silly bugger.
   children:
   - 54393916-c553-4ba7-93a8-87306791cb0f
   rect:
@@ -82,33 +82,12 @@ MonoBehaviour:
   m_Name: 54393916-c553-4ba7-93a8-87306791cb0f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  sentence: 
+  sentence: '*ATTACK*'
   children: []
   rect:
     serializedVersion: 2
     x: 1136
     y: 129
-    width: 200
-    height: 100
---- !u!114 &-4459316998071448547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
-  m_Name: c63227c7-769d-46fc-98b1-aa370dfd810a
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  sentence: 
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 747
-    y: 295
     width: 200
     height: 100
 --- !u!114 &-1677945395195245136
@@ -124,12 +103,12 @@ MonoBehaviour:
   m_Name: cbb65245-c2d6-44e1-8dbd-3d2d811c4eac
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  sentence: 
+  sentence: Oh sorry. I will just be going.
   children: []
   rect:
     serializedVersion: 2
-    x: 1022
-    y: 392
+    x: 1131
+    y: 306
     width: 200
     height: 100
 --- !u!114 &11400000
@@ -142,7 +121,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 800506d01fdb34248871977012a4b6ea, type: 3}
-  m_Name: New Dialogue
+  m_Name: Ric Flair
   m_EditorClassIdentifier: 
   canvasSize: {x: 2000, y: 2000}
   newNodeOffset: {x: 200, y: 0}
@@ -155,7 +134,6 @@ MonoBehaviour:
   - {fileID: -1677945395195245136}
   - {fileID: -5653707658360200242}
   - {fileID: 300966071423249210}
-  - {fileID: -4459316998071448547}
 --- !u!114 &300966071423249210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,12 +147,12 @@ MonoBehaviour:
   m_Name: d68afdb5-3bd2-40f0-a6c6-0f44bb20c081
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  sentence: 
+  sentence: '*ATTACK*'
   children: []
   rect:
     serializedVersion: 2
-    x: 481
-    y: 367
+    x: 490
+    y: 372
     width: 200
     height: 100
 --- !u!114 &1665593006814668660
@@ -190,10 +168,9 @@ MonoBehaviour:
   m_Name: e1396ad7-ee07-44ac-aca1-ec8fa71e618d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  sentence: 
+  sentence: Woooooo.
   children:
   - d0bce397-21c4-4ec4-b754-01c0da91dc5c
-  - c63227c7-769d-46fc-98b1-aa370dfd810a
   rect:
     serializedVersion: 2
     x: 435
@@ -213,12 +190,12 @@ MonoBehaviour:
   m_Name: 54801be9-25a2-4d06-aa90-2664c8135b71
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  sentence: 
+  sentence: Who do you think you are Wooing?
   children:
   - ccdc982a-d31e-4362-806e-9b3cc9552746
   rect:
     serializedVersion: 2
-    x: 437
-    y: 32
+    x: 446
+    y: 49
     width: 200
     height: 100
