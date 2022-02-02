@@ -388,7 +388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.767822, y: -187.55585}
+  m_AnchoredPosition: {x: -47.767944, y: -187.55585}
   m_SizeDelta: {x: -2407.5083, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7925651142549010005
@@ -486,6 +486,7 @@ MonoBehaviour:
   AIResponse: {fileID: 2971929362900834211}
   choiceRoot: {fileID: 8644969202792023715}
   choicePrefab: {fileID: 2258949161693773721, guid: 2106841fa72b23647b67c686b6aa68bb, type: 3}
+  quitButton: {fileID: 3663245183858197849}
 --- !u!1 &2971929362900834211
 GameObject:
   m_ObjectHideFlags: 0
