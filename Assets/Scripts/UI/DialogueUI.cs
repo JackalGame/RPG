@@ -27,7 +27,7 @@ namespace RPG.UI
             nextButton.onClick.AddListener(() => playerConversant.Next());
             quitButton.onClick.AddListener(() => playerConversant.Quit());
             UpdateUI();
-        }
+        } 
 
         private void UpdateUI()
         {

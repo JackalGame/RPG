@@ -1,5 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6398763487034093904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: ea0e82c7-516e-4205-a823-07de60ed0b1d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Wow, just wow
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1159
+    y: 13
+    width: 200
+    height: 100
 --- !u!114 &-3049234888806560932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,14 +33,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
   m_Name: 3baf49be-d915-404b-9a81-66231f290543
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  sentence: 
+  isPlayerSpeaking: 1
+  sentence: I'm .........
   children:
   - 784b9904-360a-4faa-b22c-c0480bea9b71
   rect:
     serializedVersion: 2
     x: 617
-    y: 23
+    y: 22
     width: 200
     height: 100
 --- !u!114 &-1408634143126102645
@@ -34,16 +55,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
   m_Name: 2fd70463-dd50-43f6-bf06-712918bd7d98
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  sentence: 
+  isPlayerSpeaking: 0
+  sentence: What is your name?
   children:
   - 3baf49be-d915-404b-9a81-66231f290543
   - fe24f8d6-f7fa-4fb7-989e-983e8b85bf18
-  - c6d052c5-6d9f-4849-9c6a-c12aee71748c
   rect:
     serializedVersion: 2
-    x: 322
-    y: 70
+    x: 333
+    y: 72
     width: 200
     height: 100
 --- !u!114 &11400000
@@ -66,7 +86,10 @@ MonoBehaviour:
   - {fileID: -3049234888806560932}
   - {fileID: 431762671758295772}
   - {fileID: 5646417200944742466}
-  - {fileID: 8400980749704333154}
+  - {fileID: -6398763487034093904}
+  - {fileID: 2488098607874110398}
+  - {fileID: 1144422109196739388}
+  - {fileID: 941641458239458177}
 --- !u!114 &431762671758295772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,13 +102,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
   m_Name: 784b9904-360a-4faa-b22c-c0480bea9b71
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  sentence: 
+  isPlayerSpeaking: 0
+  sentence: IT DOESN'T MATTER WHAT YOUR NAME IS!
+  children:
+  - ea0e82c7-516e-4205-a823-07de60ed0b1d
+  - 34584789-1b8c-4594-b0d1-a01a613d00b1
+  rect:
+    serializedVersion: 2
+    x: 890
+    y: 64
+    width: 200
+    height: 100
+--- !u!114 &941641458239458177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: b24c9957-9b08-4df0-947d-8af55bbe1eea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: How about I open a can of whoop-ass on you for that!
   children: []
   rect:
     serializedVersion: 2
-    x: 922
-    y: 70
+    x: 1422
+    y: 204
+    width: 200
+    height: 100
+--- !u!114 &1144422109196739388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: e393eb95-ebfd-4ae6-b001-3752df17f7e7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Touche
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1424
+    y: 42
+    width: 200
+    height: 100
+--- !u!114 &2488098607874110398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 34584789-1b8c-4594-b0d1-a01a613d00b1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Well it did with your mum last night
+  children:
+  - e393eb95-ebfd-4ae6-b001-3752df17f7e7
+  - b24c9957-9b08-4df0-947d-8af55bbe1eea
+  rect:
+    serializedVersion: 2
+    x: 1159
+    y: 130
     width: 200
     height: 100
 --- !u!114 &5646417200944742466
@@ -100,13 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
   m_Name: fe24f8d6-f7fa-4fb7-989e-983e8b85bf18
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  sentence: 
+  isPlayerSpeaking: 1
+  sentence: '*Run*'
   children: []
   rect:
     serializedVersion: 2
-    x: 618
-    y: 123
+    x: 625
+    y: 163
     width: 200
     height: 100
 --- !u!114 &8211340537817633955
@@ -122,33 +212,12 @@ MonoBehaviour:
   m_Name: 350db2b5-8290-4deb-be35-5ee31c82bdbe
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  sentence: 
+  sentence: Stop!
   children:
   - 2fd70463-dd50-43f6-bf06-712918bd7d98
   rect:
     serializedVersion: 2
     x: 22
     y: 70
-    width: 200
-    height: 100
---- !u!114 &8400980749704333154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
-  m_Name: c6d052c5-6d9f-4849-9c6a-c12aee71748c
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  sentence: 
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 618
-    y: 241
     width: 200
     height: 100
