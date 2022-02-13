@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab26b201bf634f34aaa9754225b2b46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDialogue: {fileID: 0}
+  playerName: Larry Longbottom
 --- !u!114 &7123886219466226379
 MonoBehaviour:
   m_ObjectHideFlags: 0

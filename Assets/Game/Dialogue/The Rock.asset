@@ -42,7 +42,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 617
-    y: 22
+    y: 16
     width: 200
     height: 100
   onEnterAction: TestSelection
@@ -66,8 +66,8 @@ MonoBehaviour:
   - fe24f8d6-f7fa-4fb7-989e-983e8b85bf18
   rect:
     serializedVersion: 2
-    x: 333
-    y: 72
+    x: 330
+    y: 71
     width: 200
     height: 100
   onEnterAction: 
@@ -115,8 +115,8 @@ MonoBehaviour:
   - 34584789-1b8c-4594-b0d1-a01a613d00b1
   rect:
     serializedVersion: 2
-    x: 890
-    y: 64
+    x: 887
+    y: 65
     width: 200
     height: 100
   onEnterAction: 
@@ -138,7 +138,7 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1422
+    x: 1420
     y: 204
     width: 200
     height: 100
@@ -209,7 +209,7 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 625
+    x: 627
     y: 163
     width: 200
     height: 100
@@ -233,7 +233,7 @@ MonoBehaviour:
   - 2fd70463-dd50-43f6-bf06-712918bd7d98
   rect:
     serializedVersion: 2
-    x: 22
+    x: 26
     y: 70
     width: 200
     height: 100
