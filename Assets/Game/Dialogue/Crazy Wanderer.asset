@@ -1,0 +1,291 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7700831900696994481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 5f6e6ef5-e916-4b41-9a85-5e3cb498dfd3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: That would be great...
+  children:
+  - d3123798-3148-4629-aba1-7e494ba7100e
+  rect:
+    serializedVersion: 2
+    x: 1738
+    y: 28
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7149642207802275736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 30c6aca2-5ca1-4c6b-bca0-4762266d94bd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Ok bye
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1519
+    y: 129
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6999483531867163601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: fc0a1683-d434-4d67-ac52-f8032a599770
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Oh right, And shall I find it?
+  children:
+  - 5f6e6ef5-e916-4b41-9a85-5e3cb498dfd3
+  rect:
+    serializedVersion: 2
+    x: 1517
+    y: 11
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5637694233626565182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 88869284-ecfd-4cb5-b369-f75ab2747984
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Are you ok?
+  children:
+  - a73ff902-7a9b-4543-a023-3e53b4ed3467
+  rect:
+    serializedVersion: 2
+    x: 950
+    y: 13
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4100721611943145051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 7f7eb046-7134-422d-8de3-89222be42f05
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Tick tick tick tick tick
+  children:
+  - 88869284-ecfd-4cb5-b369-f75ab2747984
+  - 0bcc698c-63bc-49fb-b6c4-7f0bf8d88e54
+  rect:
+    serializedVersion: 2
+    x: 676
+    y: 32
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3626315980618899563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: edbb13d0-1139-42c3-91ae-629f2554c943
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: humn num numm hmmmmm
+  children:
+  - 6906d822-600c-43ca-8f57-fdd3874776da
+  - 1db1d054-3f0a-4636-bc18-24460462ecbb
+  rect:
+    serializedVersion: 2
+    x: 63
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3607638015570389711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 6906d822-600c-43ca-8f57-fdd3874776da
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: What?
+  children:
+  - 7f7eb046-7134-422d-8de3-89222be42f05
+  rect:
+    serializedVersion: 2
+    x: 376
+    y: 32
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1874799749461512901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: d3123798-3148-4629-aba1-7e494ba7100e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: and then kill the fucker!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2012
+    y: 28
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800506d01fdb34248871977012a4b6ea, type: 3}
+  m_Name: Crazy Wanderer
+  m_EditorClassIdentifier: 
+  canvasSize: {x: 3000, y: 2000}
+  newNodeOffset: {x: 300, y: 0}
+  nodes:
+  - {fileID: -3626315980618899563}
+  - {fileID: -3607638015570389711}
+  - {fileID: 4824417246965235186}
+  - {fileID: -4100721611943145051}
+  - {fileID: -5637694233626565182}
+  - {fileID: 599648201032483996}
+  - {fileID: 3466407341019388524}
+  - {fileID: -6999483531867163601}
+  - {fileID: -7149642207802275736}
+  - {fileID: -7700831900696994481}
+  - {fileID: -1874799749461512901}
+--- !u!114 &599648201032483996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: a73ff902-7a9b-4543-a023-3e53b4ed3467
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: No! There's a Goose Loose about This Hoose!
+  children:
+  - fc0a1683-d434-4d67-ac52-f8032a599770
+  - 30c6aca2-5ca1-4c6b-bca0-4762266d94bd
+  rect:
+    serializedVersion: 2
+    x: 1236
+    y: 19
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3466407341019388524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 0bcc698c-63bc-49fb-b6c4-7f0bf8d88e54
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: You're a psycho. I am out of here
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 954
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4824417246965235186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 1db1d054-3f0a-4636-bc18-24460462ecbb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: '*Ignore*'
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 381
+    y: 171
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

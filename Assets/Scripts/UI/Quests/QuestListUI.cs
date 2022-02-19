@@ -7,11 +7,19 @@ public class QuestListUI : MonoBehaviour
 {
     [SerializeField] QuestItemUI questPrefab;
 
+    QuestList questList;
+
     // Start is called before the first frame update
     void Start()
     {
+        questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
+        questList.onUpdate += Redraw;
+        Redraw();
+    }
+
+    private void Redraw()
+    {
         transform.DetachChildren();
-        QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
         foreach (QuestStatus status in questList.GetStatuses())
         {
             QuestItemUI uiInstance = Instantiate(questPrefab, transform);
