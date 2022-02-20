@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5368240407263966224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 4f831006-e618-4392-96a4-2824504096e1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Honk Honk
+  children:
+  - 8a4a8c64-f473-4857-aadf-8acfa2225d5a
+  rect:
+    serializedVersion: 2
+    x: 19
+    y: 67
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800506d01fdb34248871977012a4b6ea, type: 3}
+  m_Name: The Goose
+  m_EditorClassIdentifier: 
+  canvasSize: {x: 2000, y: 2000}
+  newNodeOffset: {x: 300, y: 0}
+  nodes:
+  - {fileID: -5368240407263966224}
+  - {fileID: 2225817217104807912}
+  - {fileID: 1559264626018624443}
+  - {fileID: 5810369190604633035}
+--- !u!114 &1559264626018624443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 299b3872-845a-4abd-9be2-69b98fe5309f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: I am the Goose you Moron...
+  children:
+  - 653573d5-6531-4819-ab0e-49ebc659eb31
+  rect:
+    serializedVersion: 2
+    x: 622
+    y: 61
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: CompleteObjective
+--- !u!114 &2225817217104807912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 8a4a8c64-f473-4857-aadf-8acfa2225d5a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: What is wrong with you people
+  children:
+  - 299b3872-845a-4abd-9be2-69b98fe5309f
+  rect:
+    serializedVersion: 2
+    x: 322
+    y: 61
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5810369190604633035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 653573d5-6531-4819-ab0e-49ebc659eb31
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Now be gone! Honk Honk Honk
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 910
+    y: 56
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

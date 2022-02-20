@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Get the beers in
   m_EditorClassIdentifier: 
   objectives:
-  - Go to the bar
-  - Order 5 beers
-  - Dont spill them on your way back
+  - reference: 1
+    description: Go to the bar
+  - reference: 2
+    description: Get the beers in
+  - reference: 3
+    description: Don't spill the beers
+  rewards: []

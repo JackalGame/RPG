@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 800506d01fdb34248871977012a4b6ea, type: 3}
-  m_Name: Crazy Wanderer
+  m_Name: Crazy Guard
   m_EditorClassIdentifier: 
   canvasSize: {x: 3000, y: 2000}
   newNodeOffset: {x: 300, y: 0}

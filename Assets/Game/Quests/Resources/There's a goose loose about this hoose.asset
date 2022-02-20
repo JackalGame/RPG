@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: There's a goose loose about this hoose
   m_EditorClassIdentifier: 
   objectives:
-  - Find the goose
-  - Shoot the fucker!
+  - reference: 1
+    description: Find the Goose
+  - reference: 2
+    description: Kill the Goose
+  rewards:
+  - number: 5
+    item: {fileID: 11400000, guid: 2c946ed8ddb26294580d1bc303e42f4f, type: 2}
+  - number: 1
+    item: {fileID: 11400000, guid: eba0b98d0ff4f3b4dacaa60ef1a139e5, type: 2}
