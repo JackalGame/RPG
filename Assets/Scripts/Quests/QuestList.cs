@@ -4,10 +4,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Core;
 
 namespace RPG.Quests
 {
-    public class QuestList : MonoBehaviour, ISaveable
+    public class QuestList : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         List<QuestStatus> statuses = new List<QuestStatus>();
 
@@ -52,6 +53,19 @@ namespace RPG.Quests
             return statuses;
         }
 
+        public bool? Evaluate(string predicate, string[] parameters)
+        {
+            switch (predicate)
+            {
+                case "HasQuest":
+                    return HasQuest(Quest.GetByName(parameters[0]));
+                case "CompletedQuest":
+                    return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
+            }
+
+            return null;
+        }
+
         private QuestStatus GetQuestStatus(Quest quest)
         {
             foreach (QuestStatus status in statuses)
@@ -76,7 +90,6 @@ namespace RPG.Quests
             }
         }
 
-
         public object CaptureState()
         {
             List<object> state = new List<object>();
@@ -97,7 +110,6 @@ namespace RPG.Quests
             foreach (object objectState in stateList)
             {
                 statuses.Add(new QuestStatus(objectState));
-
             }
         }
     }

@@ -24,6 +24,34 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7687819715729218097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: ce161e80-49f2-4f69-8693-c9f86e476269
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: No! but I still want my reward for wasting my time!
+  children:
+  - 647459a3-3783-413e-9888-3e0e8f28bc97
+  rect:
+    serializedVersion: 2
+    x: 2271
+    y: 342
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-7149642207802275736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +75,13 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 1
 --- !u!114 &-6999483531867163601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +106,39 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 1
+--- !u!114 &-6472765643033352169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 3379bace-d7ba-4f82-9938-f975df6f94f2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: And?
+  children:
+  - 14150fe6-7efe-4e45-85f0-865002cb0620
+  rect:
+    serializedVersion: 2
+    x: 1393
+    y: 329
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-5637694233626565182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +163,34 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4368704780998492712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 647459a3-3783-413e-9888-3e0e8f28bc97
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Ok, I guess thats fair.
+  children:
+  - 2d5f1390-7027-42ac-8f0e-bd13334dda58
+  rect:
+    serializedVersion: 2
+    x: 2483
+    y: 340
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-4100721611943145051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +208,7 @@ MonoBehaviour:
   children:
   - 88869284-ecfd-4cb5-b369-f75ab2747984
   - 0bcc698c-63bc-49fb-b6c4-7f0bf8d88e54
+  - f9264036-119e-4576-a30a-672987ad34da
   rect:
     serializedVersion: 2
     x: 676
@@ -120,6 +217,8 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-3626315980618899563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,14 +236,17 @@ MonoBehaviour:
   children:
   - 6906d822-600c-43ca-8f57-fdd3874776da
   - 1db1d054-3f0a-4636-bc18-24460462ecbb
+  - c03b4c1a-5410-4db5-b9ca-080f7e644b5d
   rect:
     serializedVersion: 2
-    x: 63
+    x: 62
     y: 87
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-3607638015570389711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,12 +265,40 @@ MonoBehaviour:
   - 7f7eb046-7134-422d-8de3-89222be42f05
   rect:
     serializedVersion: 2
-    x: 376
-    y: 32
+    x: 380
+    y: 47
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2391144957866411446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 52077108-44ab-49a9-9c81-616a771593a6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Anyway, Is he dead?
+  children:
+  - ce161e80-49f2-4f69-8693-c9f86e476269
+  rect:
+    serializedVersion: 2
+    x: 2050
+    y: 334
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-1874799749461512901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +322,91 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &-1552568155765528665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: f9264036-119e-4576-a30a-672987ad34da
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: Oh, now I remember
+  children:
+  - c03b4c1a-5410-4db5-b9ca-080f7e644b5d
+  rect:
+    serializedVersion: 2
+    x: 997
+    y: 236
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 0
+--- !u!114 &-1402031573377112185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 3965caa0-be66-4f57-a8c7-2ea476b4d932
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: I thought I did
+  children:
+  - 52077108-44ab-49a9-9c81-616a771593a6
+  rect:
+    serializedVersion: 2
+    x: 1824
+    y: 333
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-993843809289888712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 14150fe6-7efe-4e45-85f0-865002cb0620
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: And you didn't tell me it was a human!!
+  children:
+  - 3965caa0-be66-4f57-a8c7-2ea476b4d932
+  rect:
+    serializedVersion: 2
+    x: 1607
+    y: 338
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +433,15 @@ MonoBehaviour:
   - {fileID: -7149642207802275736}
   - {fileID: -7700831900696994481}
   - {fileID: -1874799749461512901}
+  - {fileID: 7772471565580839396}
+  - {fileID: -6472765643033352169}
+  - {fileID: -993843809289888712}
+  - {fileID: -1402031573377112185}
+  - {fileID: -2391144957866411446}
+  - {fileID: -7687819715729218097}
+  - {fileID: -4368704780998492712}
+  - {fileID: 2334658426253284365}
+  - {fileID: -1552568155765528665}
 --- !u!114 &599648201032483996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +459,7 @@ MonoBehaviour:
   children:
   - fc0a1683-d434-4d67-ac52-f8032a599770
   - 30c6aca2-5ca1-4c6b-bca0-4762266d94bd
+  - f9264036-119e-4576-a30a-672987ad34da
   rect:
     serializedVersion: 2
     x: 1236
@@ -243,6 +468,33 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
+--- !u!114 &2334658426253284365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: 2d5f1390-7027-42ac-8f0e-bd13334dda58
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  sentence: Here, take it
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2707
+    y: 341
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: CompleteObjective
+  condition:
+    and: []
 --- !u!114 &3466407341019388524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,12 +512,19 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 954
-    y: 135
+    x: 970
+    y: 114
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 1
 --- !u!114 &4824417246965235186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +543,46 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 381
-    y: 171
+    y: 237
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 1
+--- !u!114 &7772471565580839396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7c9de221d27541bc3aa1e174bfc08, type: 3}
+  m_Name: c03b4c1a-5410-4db5-b9ca-080f7e644b5d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  sentence: I found the Goose
+  children:
+  - 3379bace-d7ba-4f82-9938-f975df6f94f2
+  rect:
+    serializedVersion: 2
+    x: 1198
+    y: 328
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - There's a goose loose about this hoose
+        negate: 0
