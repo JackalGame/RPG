@@ -312,11 +312,11 @@ MonoBehaviour:
   m_Name: d3123798-3148-4629-aba1-7e494ba7100e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  sentence: and then kill the fucker!
+  sentence: and then kill it!
   children: []
   rect:
     serializedVersion: 2
-    x: 2012
+    x: 1982
     y: 28
     width: 200
     height: 100
